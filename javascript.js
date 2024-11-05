@@ -1,14 +1,16 @@
 const booksTable = document.querySelector(".booksBody");
 const container = document.querySelector(".container");
 
-function Book(id, author, title, pagesNum, isRead) {
-    this.id = id;
-    this.author = author;
-    this.title = title;
-    this.pagesNum = pagesNum;
-    this.isRead = isRead;
+class Book {
+    constructor(id, author, title, pagesNum, isRead) {
+        this.id = id;
+        this.author = author;
+        this.title = title;
+        this.pagesNum = pagesNum;
+        this.isRead = isRead;
+    }
 
-    this.negateIsRead = function () {
+    negateIsRead() {
         this.isRead = !this.isRead;
     }
 }
